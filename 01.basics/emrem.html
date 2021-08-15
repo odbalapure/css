@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesasurements - 1</title>
+    <style>
+        /* 
+        #################
+        EM and REM
+        #################
+        */
+
+        /* 
+        CSS supports 2 type of mesaurement units
+        1. Absolute: px, cm, mm etc
+        2. Relative: rem, em, % etc - specify length relative to another property
+        */
+        body {
+            /* wont have an effect iff h1 and p have absolute sizes*/
+            /* but if h1 and p use relative units then it will have an effect */
+            /* font-size: 20px; */
+        }
+
+        h1, p {
+            /* body font-size is 20px, hence 1em => 20px */
+            font-size: 3em;
+        }
+
+        div {
+            /* as p is wrapped inside div then, 1em => 10px */
+            font-size: 10px;
+        }
+
+        /* 
+        NOTE: If parent element size is not defined then
+            font size from parent root i.e. HTML is used to calculate font size
+        */
+        html {
+            font-size: 20px;
+        }
+
+        /*
+        NOTE: The key difference b/w EM and REM is that the font size of HTML is __only__
+            taken into consideration while calculating in case of REM
+        */
+
+        /* NOTE: Once we specify the HTML font size, changing the settings from the
+            browser does not have an effect */
+    </style>
+</head>
+
+<body>
+    <!-- h1 deafult size: 32px -->
+    <!-- "HTML" is the parent of "h1" (in this case) as BODY does not specify any font size -->
+    <h1>Heading</h1>
+    <div>
+        <!-- p default size: 16px -->
+        <!-- "div" is the parent element of p -->
+        <p>Paragraph</p>
+    </div>
+</body>
+
+</html>

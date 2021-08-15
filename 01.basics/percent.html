@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesasurements - 2</title>
+    <style>
+        /* 
+        #################
+        PERCENTAGE
+        #################
+        */
+
+        body {
+            /* remove the default margins */
+            margin: 0;
+
+        }
+
+        section {
+            font-size: 30px;
+            background-color: orangered;
+            color: azure;
+            /* NOTE: will occupy 70% of the web page now */
+            /* width: 70%; */
+
+            /* section will cover the ENTIRE page */
+            /* view port height */
+            height: 100vh; 
+            /* view port width */
+            width: 50vw;
+            /* vw/vh sizes works wrt to view port */
+            /* % works wrt to parent element size */
+        }
+
+        h1 {
+            /* "% size" is caculated acc. to the PARENT element */
+            /* font size is caculated from HTML now i.e. 16px as default */
+            /* increasing to 200% means size will be 32px */
+
+            /* lets change the parent to "section" */
+            font-size: 200%;
+            /* NOTE: every element has some default padding/margin to it */
+            margin: 0;
+        }
+
+        section div {
+            /* div takes size of its parent element by default */
+            background-color: green;
+            /* occupy 50% size of parent element now */
+            width: 50%;
+            /* NOTE: if you use vw it dont make any difference as viewport works differently*/
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Heading</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus unde tempore nostrum dolore deleniti
+                inventore deserunt numquam ducimus quas accusamus?</p>
+        </div>
+    </section>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa at blanditiis porro sit adipisci ex. Vitae deserunt optio ipsam sit pariatur autem aliquam vel dicta ipsa explicabo expedita officiis temporibus quod placeat ipsum nobis commodi, accusantium sed itaque consectetur blanditiis eveniet, neque incidunt vero. Repellendus totam error facilis officia vitae numquam voluptatibus? Ipsum totam sunt nobis voluptas ex atque eum excepturi beatae quos culpa, autem quas. Ut doloribus praesentium exercitationem facere obcaecati cum, quidem, facilis ad, iure molestiae natus culpa ipsa iste non modi. Labore cupiditate earum iure at hic consequatur sint autem nesciunt animi sequi esse accusamus libero totam atque debitis exercitationem ullam aperiam, consequuntur voluptate. Ab beatae libero pariatur eum minus aliquam magni suscipit aut consectetur. Impedit minima tempora deserunt laudantium quae exercitationem quia eius ex. Laudantium, soluta aspernatur voluptatem id impedit voluptates aliquam! Mollitia sint pariatur aperiam quas est architecto. Sint ducimus quas aspernatur recusandae ab suscipit amet doloribus, provident nihil quis eligendi voluptas veniam distinctio omnis cum est neque aut, nostrum consequatur commodi, quasi tenetur quibusdam dolores a? Quia facilis, hic ipsa quasi veritatis fugit temporibus magnam voluptatum voluptas, voluptate sit perferendis pariatur officia expedita. Harum quaerat velit dignissimos facere sint deleniti omnis ipsum culpa beatae!</p>
+</body>
+
+</html>

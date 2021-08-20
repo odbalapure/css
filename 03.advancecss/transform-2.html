@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform - 2</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            padding-top: 55px;
+            box-sizing: border-box;
+            margin: 350px auto;
+
+            /* apply transformation after hover */
+            transition: transform 1s;
+        }
+
+        .box:hover {
+            /* bends the element along X axis */
+            /* transform: skewX(30deg); */
+
+            /* also works on X and Y axes */
+            /* transform: skew(30deg, 20deg); */
+
+            /* rotate element */
+            /* transform: rotateY(180deg); */
+
+            /* short hand notation */
+            transform: translate(200px, 200px) scale(1.5, 1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Box</div>
+</body>
+
+</html>

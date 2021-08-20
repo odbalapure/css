@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* 
+        #################
+        OVERFLOW
+        ##################
+        sometimes it might happen that the content of an element does not fit in an area
+        in this case we use OVERFLOW in this case. properties are: 
+        - visible (default)
+        - hidden
+        - auto
+        - scroll
+        NOTE: works on block level element with specified height
+        */
+        div {
+            width: 400px;
+            height: 200px;
+            border: 5px solid green;
+            background-color: #ccc;
+            /* the content is not contained with in the "div" */
+
+            /* hides content */
+            /* overflow: hidden; */
+
+            /* creates scrollbar */
+            overflow: auto;
+
+            /* create vertical scrollbar */
+            /* overflow-y: scroll; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio alias quia quaerat accusantium perspiciatis.
+        Voluptatibus, numquam quibusdam facere rem tempore similique alias corporis natus fugit inventore, eum incidunt
+        consequuntur, quasi aspernatur vitae accusantium! Accusamus eligendi unde ducimus! Quo autem ad culpa non
+        impedit ut quia corrupti, voluptas delectus accusamus numquam, sit possimus est perspiciatis cupiditate aliquid
+        libero explicabo vitae accusantium at sapiente mollitia adipisci quidem corporis! Suscipit architecto, sequi
+        beatae provident, perspiciatis repudiandae numquam corporis aliquam necessitatibus deserunt incidunt nisi
+        delectus eum a aspernatur dolor? Illo amet reiciendis sunt ea omnis quod porro debitis fugiat nobis voluptate.
+        Eligendi, amet rerum.
+    </div>
+</body>
+
+</html>

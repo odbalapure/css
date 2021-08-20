@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats</title>
+    <style>
+        /* 
+        #################
+        FLOATS
+        ##################
+        */
+        .container {
+            background-color: #ccc;
+            border-top: 20px solid blue;
+            border-bottom: 20px solid black;
+            /* to fix the border issue */
+            /* overflow: auto;             */
+        }
+
+        .left {
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+            /* element jumps out of normal flow */
+            /* the green box will hide behind the orange one */
+            float: left;
+        }
+
+        .right {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            /* moves element to right most corner */
+            float: right;
+        }
+
+        /* .clear {
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+</body>
+</html>

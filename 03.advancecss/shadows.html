@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+    <style>
+        .heading {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 55px;
+            text-align: center;
+            color: #555;
+
+            /* need 2 parameters for shadow */
+            /* x axis, y axis, opacity color  */
+            text-shadow: 3px 3px 10px #888;  
+        }
+
+        /* creating box shadow */
+        .card {
+            width: 400px;
+            margin: 100px auto;
+            background-color: #ccc;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 5px 5px 10px #777;
+        }
+
+        /* box shadow with hover effect */
+        .card:hover {
+            box-shadow: 10px 10px 20px #aaa;
+        }
+
+        /* fit the image inside the container */
+        .card img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">This is a heading</h1>
+    <div class="card">
+        <img src="img/image 1.jpeg" alt="Desktop">
+        <h2>Card class</h2>
+    </div>
+</body>
+</html>

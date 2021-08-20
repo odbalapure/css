@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations - 1</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            position: relative;
+
+            /* animations have been defined, time to use them now */
+            animation-name: anim;
+            animation-duration: 4s;
+        }
+
+        /* We have to use "keyframes" to create animations */
+        /* anim - can name the animation anything */
+        @keyframes anim {
+            /* styles at start of the animation */
+            from {
+                left: 0;
+                top: 0;
+                background-color: orangered;
+            }
+
+            /* styles at end of the animation */
+            to {
+                left: 500px;
+                top: 0;
+                background-color: green;
+            }
+
+            /* 
+            * NOTE: from - to can be replaced with 0% - 100% resp. 
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

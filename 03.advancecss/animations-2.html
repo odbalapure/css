@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations - 2</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            position: relative;
+
+            /* using the animation */
+            /* animation-name: anim;  */
+
+            /* duration of animation */
+            /* animation-duration: 4s; */
+            
+            /* delay in animation */
+            /* animation-delay: 1s; */
+            
+            /* no. of times we want to run an animation */
+            /* animation-iteration-count: infinite; */
+            
+            /* direction of animation */
+            /* animation-direction: alternate; */
+
+            /* similar to transition-timing-function */
+            /* animation-timing-function: linear; */
+
+            /* box does not return to initial position when animation finishes */
+            /* animation-fill-mode: forwards; */
+
+            /* short hand notation */
+            animation: anim 4s ease-in 2s infinite alternate both;
+        }
+
+        @keyframes anim {
+            0% {
+                left: 0;
+                top: 0;
+                background-color: orangered;
+            }
+
+            25% {
+                left: 500px;
+                top: 0;
+                background-color: green;
+            }
+
+            50% {
+                left: 500px;
+                top: 500px;
+                background-color: goldenrod;
+
+            }
+
+            75% {
+                left: 0;
+                top: 500px;
+                background-color: royalblue;
+                
+            }
+            100% {
+                left: 0;
+                top: 300px;
+                background-color: orangered;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

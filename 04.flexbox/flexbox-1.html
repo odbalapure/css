@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        /* 
+        ################
+        FLEXBOX
+        ################
+        
+        flex container
+        - display: flex || inline-flex
+        - flex-direction: row || row-reverse | column | column-reverse
+        - flex-wrap: nowrap | wrap
+        - justify-content: flex-start || flex-end | center | space-between | space-around | space-evenly
+        - align-items: strech || flex-start | flex-end | center | baseline
+        - align-content: flex-start || flex-end | center | space-between | space-around | space-evenly
+
+        flex items
+        order: 0 || (number)
+        align-self: auto || strech | flex-start | flex-end | baseline
+        flex-grow: 0 || (number)
+        flex-basis: auto || (length)
+        flex-shrink: 1 || (number)
+        flex: 0 1 auto
+        */
+
+        .item {
+            padding: 30px;
+            margin: 10px;
+            background-color: #06af8f;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .container {
+            height: 700px;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #f19861;
+
+            /* adding flex */
+            /* - container behaves as INLINE element and will take space only required to display the content */
+            /* display: inline-flex; */
+
+            /* - container will behave as BLOCK level element and cover entire width of page*/
+            display: flex; 
+            
+            /* direction of flex */
+            /* - align elements in reverse direction along the row */
+            /* flex-direction: row; */
+
+            /* - elements take full width of the web page vertically */
+            flex-direction: column;
+
+            /* flex wrap */
+            /* - items will be stacked if page size is reduced (responsiveness) */
+            flex-wrap: wrap;
+
+            /* justify content */
+            /* - align items in center */
+            /* justify-content: center; */
+
+            /* - align items with space */
+            /* - NOTE: space-around does not provide paddding on edges */
+            justify-content: space-evenly;
+
+            /* - place item at bottom of container */
+            align-items: center;
+
+            /* align content */
+            /* align-content: stretch; */
+            /* align-content: space-between; */
+        }
+
+        /* 
+        * NOTE: 
+        * -> justify-content: control alignment on MAIN axis
+        * -> align-items: control alingment on CROSS axis
+        * -> align-content: control space between flex lines on CROSS axis
+        */
+
+        /* 
+        flex-direction: column
+            CROSS Axis
+        -------------------------> 
+        | 
+        | MAIN 
+        | Axis
+        | 
+        |
+        V
+
+        flex-direction: row
+        ^
+        |
+        | CROSS 
+        | Axis
+        |
+        --------------------------->        
+            MAIN Axis
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">A</div>
+        <div class="item item-2">B</div>
+        <div class="item item-3">C</div>
+        <div class="item item-4">D</div>
+        <div class="item item-5">E</div>
+    </div>
+</body>
+</html>

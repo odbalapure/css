@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids 1</title>
+    <style>
+        /* 
+        CREATE GRIDS
+        GRID GAP ROWS && COLUMNS
+        FRACTIONAL UNIT
+        */
+        .container {
+            width: 800px;
+            background-color: #ddd;
+            margin: 40px auto;
+
+            /* creating grid */
+            display: grid;
+            
+            /* - setting height for 2 elements */
+             grid-template-rows: 150px 150px;
+            /* grid-template-columns: 150px 150px 150px; */
+            /* NOTE: this will create a grid of 2 X 3 */
+
+            /* - create gap in grid */
+            /* grid-row-gap: 30px;
+            grid-column-gap: 50px; */
+            grid-gap: 30px 50px;
+
+            /* - take full width of the container */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+        
+            /* fractional unit */
+            /* - instead of writing sizes of each column */
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: 50% repeat(2, 1fr);
+        }
+
+        .item {
+            padding: 30px;
+            font-size: 30px;
+        }
+
+        .item-1 {
+            background-color: orangered;
+        }
+        
+        .item-2 {
+            background-color: olivedrab;
+        }
+        
+        .item-3 {
+            background-color: royalblue;
+        }
+        
+        .item-4 {
+            background-color: palevioletred;
+        }
+        
+        .item-5 {
+            background-color: goldenrod;
+        }
+
+        .item-6 {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emmet shortcut: .container>.item.item-${item $}*6 -->
+    <div class="container">
+        <div class="item item-1">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+        <div class="item item-4">item 4</div>
+        <div class="item item-5">item 5</div>
+        <div class="item item-6">item 6</div>
+    </div>
+</body>
+</html>

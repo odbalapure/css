@@ -6,20 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grids 5</title>
     <style>
+        /* 
+        - min-content
+        - max-content
+        - minmax()
+        - auto-fill
+        - auto-fit
+        */
         .container {
-            width: 600px;
+            width: 90%;
             background-color: #efefef;
-            margin: auto;
+            margin: 40px auto;
 
             display: grid;
 
-            /* this is explicit grid */
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 100px);
-            grid-gap: 1rem;
+            /* MIN MAX CONTENT */
+            /* space to dispaly content will be provided */
+            /* grid-template-columns: min-content 1fr 1fr 1fr; */
 
-            grid-auto-flow: column;
-            grid-auto-columns: 150px;
+            /* the column won't shrink once width hits 150px */
+            /* grid-template-columns: min-content 1fr 1fr minmax(150px, 300px);
+
+            grid-template-rows: 150px 150px;
+            grid-gap: 1rem; */
+
+            /* AUTO FILL FIT */
+
+            /* auto-fill: allows us to fit as many columns as possible */
+            /* grid-template-columns: repeat(auto-fill, 80px); */
+
+            /* auto-fit: similar to auto-fill, except the remaining space will have columns with 0 width */
+            grid-template-columns: repeat(auto-fit, 80px);
+            /* auto-fit makes layout responsive */
         }
 
         .item {
@@ -32,7 +50,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- .item{item $}*6 -->
+        <!-- .item{item $}*8 -->
         <div class="item">item 1</div>
         <div class="item">item 2</div>
         <div class="item">item 3</div>

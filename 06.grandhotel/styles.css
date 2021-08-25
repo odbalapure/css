@@ -1,0 +1,86 @@
+/* Global Properties */
+html {
+    /* default font size: 16px so 1rem == 16px */
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ############################################### */
+
+/* Navbar */
+
+/* Sidebar */
+.sidebar {
+    width: 8rem;
+    height: 100%;
+    background: #eee;
+
+    /* sidebar stays in place even after scrolling */
+    position: fixed;
+    
+    /* adding flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+/* Menu icon */
+.menu-icon {
+    margin-top: 3rem;
+    /* after hover, arrow changes to a finger pointer */
+    cursor: pointer;
+}
+
+/* Creating hamburger icon */
+.line {
+    height: .2rem;
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+}
+
+.line-1, .line-3 {
+    width: 1.8rem;
+    /* increase line size slowly */
+    transition: width .3s;
+}
+
+.menu-icon:hover .line {
+    width: 2.5rem;
+}
+
+.social-icons-list {
+    /* remove bullets */
+    list-style: none;
+    /* list have some padding by default */
+    padding: 0;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* make logos bigger */
+.social-link {
+    font-size: 2rem;
+    color: #777; 
+    transition: color .3s;
+}
+
+.social-link:hover {
+    color: #deaa86;
+}
+
+.year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #555;
+}

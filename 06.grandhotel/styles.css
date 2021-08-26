@@ -1,14 +1,14 @@
 /* Global Properties */
 html {
-    /* default font size: 16px so 1rem == 16px */
-    font-size: 62.5%;
-    box-sizing: border-box;
+  /* default font size: 16px so 1rem == 16px */
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0; 
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ############################################### */
@@ -17,70 +17,220 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 8rem;
-    height: 100%;
-    background: #eee;
+  width: 8rem;
+  height: 100%;
+  background: #eee;
 
-    /* sidebar stays in place even after scrolling */
-    position: fixed;
-    
-    /* adding flex */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-} 
+  /* sidebar stays in place even after scrolling */
+  position: fixed;
+
+  /* adding flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Menu icon */
 .menu-icon {
-    margin-top: 3rem;
-    /* after hover, arrow changes to a finger pointer */
-    cursor: pointer;
+  margin-top: 3rem;
+  /* after hover, arrow changes to a finger pointer */
+  cursor: pointer;
 }
 
 /* Creating hamburger icon */
 .line {
-    height: .2rem;
-    width: 2.5rem;
-    background-color: #222;
-    margin-bottom: .6rem;
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
 }
 
-.line-1, .line-3 {
-    width: 1.8rem;
-    /* increase line size slowly */
-    transition: width .3s;
+.line-1,
+.line-3 {
+  width: 1.8rem;
+  /* increase line size slowly */
+  transition: width 0.3s;
 }
 
 .menu-icon:hover .line {
-    width: 2.5rem;
+  width: 2.5rem;
 }
 
 .social-icons-list {
-    /* remove bullets */
-    list-style: none;
-    /* list have some padding by default */
-    padding: 0;
-    height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  /* remove bullets */
+  list-style: none;
+  /* list have some padding by default */
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* make logos bigger */
 .social-link {
-    font-size: 2rem;
-    color: #777; 
-    transition: color .3s;
+  font-size: 2rem;
+  color: #777;
+  transition: color 0.3s;
 }
 
 .social-link:hover {
-    color: #deaa86;
+  color: #deaa86;
 }
 
 .year {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #555;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #555;
 }
+/* sidebar ends */
+
+/* navigation */
+.navigation {
+  margin-left: 8rem;
+  /* 
+  h1 will have some padding
+  - either use margin: 0
+  - or use position: fixed
+  */
+  position: fixed;
+  width: 40rem;
+  height: 100%;
+
+  background: linear-gradient(
+      to top,
+      rgba(34, 32, 41, 1),
+      rgba(34, 32, 41, 0.8)
+    ),
+    url(img/nav-bg.jpeg) center no-repeat;
+  background-size: cover;
+
+  /* adding flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  /* space b/w letters */
+  letter-spacing: 0.2rem;
+  color: #deaa86;
+  text-align: center;
+}
+
+.navigation-search {
+  position: relative;
+}
+
+.navigation-search-input {
+  width: 30rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #deaa86;
+  letter-spacing: 0.1rem;
+  /* avoid blue outline for input when clicked */
+  outline: none;
+  border: 0.1rem solid #555;
+  border-radius: 10rem;
+  transition: background-color 0.3s;
+}
+
+.navigation-search-input:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation-search-btn {
+  border: none;
+  background-color: transparent;
+  color: #deaa86;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 10.75rem;
+  right: 4rem;
+  cursor: pointer;
+}
+
+.navigation-item {
+  /* need to position lines wrt to parent element - so that lines dont move away any futhure */
+  position: relative;
+}
+
+.navigation-list {
+  list-style: none;
+  /* remove ul list padding */
+  padding: 0;
+  height: 28rem;
+
+  /* adding flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  /* convert letters to upper case */
+  text-transform: uppercase;
+  /* remove a hyperlink underlines */
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.navigation-link::before {
+  /* show two horizontal lines around list items - LEFT */
+  content: "";
+  /* lines are invisible earlier */
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  /* lines appear slowly | disappear little fast */
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link::after {
+  /* show two horizontal lines around list items - LEFT */
+  content: "";
+  /* lines are invisible earlier */
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  /* lines appear slowly | disappear little fast */
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link:hover {
+  color: #deaa86;
+}
+
+.navigation-link:hover::before, .navigation-link:hover::after {
+  /* make lines visible after hover */
+  width: 3rem;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* navgation end */
+
+/* navbar end */

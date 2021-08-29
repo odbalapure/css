@@ -942,4 +942,8 @@ body {
   .image-wrapper {
     width: 9rem;
   }
+  
+  .sidebar  {
+    width: 4.5rem;
+  }
 }

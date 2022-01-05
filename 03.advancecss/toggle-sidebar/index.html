@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 14 - Task 2</title>
+    <script defer src="index.js"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .navbar {
+      background-color: #232e22;
+      height: 5rem;
+    }
+
+    .navbar-content {
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 54%;
+      box-sizing: border-box;
+    }
+
+    .git-logo {
+      height: 3rem;
+    }
+
+    .navbar-title {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      width: 18rem;
+      height: 100%;
+      left: -18rem;
+
+      background-color: gray;
+      position: fixed;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+      z-index: 10;
+    }
+
+    .show-sidebar {
+      left: 0rem;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <button onclick="toggleSideBar()">Sidebar</button>
+      <div class="navbar-content">
+        <img
+          class="git-logo"
+          src="images/GitHub-Mark-Light-120px-plus.png"
+          alt=""
+        />
+        <div class="navbar-title">GITHUB</div>
+      </div>
+    </nav>
+    <div class="sidebar">Sidebar</div>
+    <div class="container"></div>
+  </body>
+</html>
